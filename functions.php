@@ -4,7 +4,7 @@ add_action('admin_menu', 'baw_create_menu');
 
 function baw_create_menu() {
 	//create new top-level menu
-	add_menu_page('PA Configurações', 'Petit Andy Configurações', 'administrator', __FILE__, 'petit_settings_page', get_template_directory_uri() . '/assets/img/petitconfig.jpg');
+	add_menu_page('Configurações', 'Configurações', 'administrator', __FILE__, 'my_settings_page', get_template_directory_uri() . '/assets/img/config.jpg');
 
 	//call register settings function
 	add_action( 'admin_init', 'register_mysettings' );
@@ -15,7 +15,7 @@ function register_mysettings() {
   add_settings_field('logo', 'Logo:', 'logo_setting', __FILE__, 'main_section'); // LOGO
 }
 
-function petit_settings_page() { ?>
+function my_settings_page() { ?>
   <div class="wrap">
     <h2>Configurations</h2>
 
